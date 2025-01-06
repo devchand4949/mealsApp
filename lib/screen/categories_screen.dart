@@ -9,11 +9,11 @@ import 'package:meals/widget/meal_item.dart';
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen(
       {super.key,
-      required this.onSelectFavoriteItem,
+      // required this.onSelectFavoriteItem,
       required this.availableMeals});
 
   final List<Meal> availableMeals;
-  final void Function(Meal meal) onSelectFavoriteItem;
+  // final void Function(Meal meal) onSelectFavoriteItem;
 
   void _selectCategory(BuildContext context, Category category) {
     final filterMealsData = availableMeals
@@ -23,7 +23,7 @@ class CategoriesScreen extends StatelessWidget {
         builder: (context) => MealsScreen(
               title: category.title, // show page title
               meals: filterMealsData, // show data using final var.... line 13,
-              onSelectFavoriteItem: onSelectFavoriteItem,
+              // onSelectFavoriteItem: onSelectFavoriteItem,
             )));
   }
 
